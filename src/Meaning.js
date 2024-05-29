@@ -10,11 +10,11 @@ export default function Meaning(props) {
         <em>{props.meaning.partOfSpeech}</em>
       </h4>
       <p className="Meaning-definition">{props.meaning.definition}</p>
-      <p className="Meaning-example">{props.meaning.example}</p>
-      {props.meaning.synonyms &&
-        props.meaning.synonyms.map(function (synonyms) {
-          return <Synonyms synonyms={synonyms} />;
-        })}
+      <p className="Meaning-example">
+        <em>Example: </em>
+        {props.meaning.example}
+      </p>
+      <Synonyms synonyms={props.meaning.synonyms} />
     </div>
   );
 }

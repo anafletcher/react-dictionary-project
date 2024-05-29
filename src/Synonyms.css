@@ -1,0 +1,10 @@
+.Synonyms-synonym {
+  list-style: none;
+  display: inline-block;
+  border-radius: 15px;
+  font-size: 11px;
+  padding: 7px;
+  margin: 3px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border: 1px solid lightgrey;
+}

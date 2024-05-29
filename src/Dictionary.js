@@ -8,31 +8,37 @@ export default function Dictionary() {
   let [results, setResults] = useState(null);
 
   function handleResponse(response) {
-    console.log(response.data[0]);
-    setResults(response.data[0]);
-  }
-
-  function search(event) {
-    event.preventDefault();
-
-    // documentation: https://api.dictionaryapi.dev/
-    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
-    axios.get(apiUrl).then(handleResponse);
+    console.log(response.data);
+    setResults(response.data);
   }
 
   function handleKeywordChange(event) {
     setKeyword(event.target.value);
   }
 
+  function search(event) {
+    event.preventDefault();
+
+    let apiKey = "f3c5613898a1043cbte4a77d8c1bcfo0";
+    let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${apiKey}`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
   return (
     <div className="Dictionary">
-      <form onSubmit={search}>
-        <input
-          className="Dictionary-search-input"
-          type="search"
-          onChange={handleKeywordChange}
-        />
-      </form>
+      <section>
+        <form onSubmit={search}>
+          <input
+            className="Dictionary-search-input"
+            type="search"
+            placeholder="Look up a word..."
+            onChange={handleKeywordChange}
+          />
+        </form>
+        <div className="Dictionary-hints">
+          <em>Examples: sunset, love, breakfast</em>
+        </div>
+      </section>
       <Results results={results} />
     </div>
   );

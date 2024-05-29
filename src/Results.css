@@ -2,15 +2,12 @@
   text-align: left;
 }
 
-.Results-returned h2 {
+.Results h2 {
   font-size: 36px;
+  font-weight: bold;
+  line-height: 1.5;
 }
 
-.Results-returned h3 {
-  opacity: 0.6;
-  margin: 0 0 20px 0;
-}
-
-.Results-default {
-  text-align: center;
+.Results-phonetics {
+  font-size: 24px;
 }

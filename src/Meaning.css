@@ -1,9 +1,19 @@
+h4 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.Meaning {
+  margin-bottom: 5px;
+  text-align: left;
+  margin-left: 0 30px;
+}
+
 .Meaning-definition {
-  margin: 5px 0 0 0;
+  font-size: 13px;
 }
 
 .Meaning-example {
-  font-size: 14px;
-  opacity: 0.8;
-  margin: 5px 0 30px 0;
+  font-size: 12px;
+  opacity: 0.6;
 }

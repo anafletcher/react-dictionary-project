@@ -8,11 +8,7 @@ export default function Results(props) {
       <div className="Results">
         <section>
           <h2>{props.results.word}</h2>
-        </section>
-
-        <section>
           <p className="Results-phonetics">
-            <strong>phonetics: </strong>
             <span className="Results-phonetics-text">
               /{props.results.phonetic} /
             </span>

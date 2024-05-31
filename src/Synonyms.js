@@ -7,11 +7,15 @@ export default function Synonmy(props) {
     return (
       <ul className="Synonyms">
         {props.synonyms.map(function (synonym, index) {
-          return (
-            <li className="Synonyms-synonym" key={index}>
-              {synonym}
-            </li>
-          );
+          if (index < 5) {
+            return (
+              <li className="Synonyms-synonym" key={index}>
+                {synonym}
+              </li>
+            );
+          } else {
+            return null;
+          }
         })}
       </ul>
     );
